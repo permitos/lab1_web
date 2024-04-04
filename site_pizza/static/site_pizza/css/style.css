@@ -1,0 +1,387 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.nav-site {
+  width: 100%;
+  height: 20vh;
+}
+
+.nav-site nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  right: 0;
+  left: 0;
+  background: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.nav-site nav .nav-logo img {
+  width: 100px;
+  cursor: pointer;
+  margin: 7px 0;
+}
+
+.nav-site nav ul {
+  list-style: none;
+}
+
+.nav-site nav ul li{
+  display: inline-block;
+  margin: 0 15px;
+}
+
+.nav-site nav a{
+  text-decoration: none;
+  text-transform: uppercase;
+  color: black;
+  font-weight: 500;
+  font-size: 17px;
+  transition: 0.1s;
+}
+
+.nav-site nav a::after{
+  content: '';
+  width: 0;
+  height: 2px;
+  background: #fac031;
+  display: block; 
+  transition: 0.2s linear;
+}
+
+.nav-site nav a:hover {
+  color: #fac031;
+}
+
+.nav-site nav a:hover::after {
+  width: 100%;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+}
+
+.main .main-img img {
+  width: 80%;
+  float: right;
+}
+
+.main .main-text {
+  white-space: nowrap;
+}
+
+.main .main-text h1 {
+  font-size: 50px;
+  font-style: italic;
+  position: relative;
+  top: -120px;
+  left: 100px;
+}
+
+.main .main-text h1 span {
+  margin-left: 15px;
+  color: #fac031;
+  font-family: mv bolid;
+  line-height: 22px;
+  font-size: 70px;
+}
+
+.main-description p {
+  width: 600px;
+  text-align: justify;
+  position: relative;
+  left: 100px;
+  bottom: 300px;
+  line-height: 22px;
+}
+
+.main-button {
+  background: #fac031;
+  position: relative;
+  left: 100px;
+  bottom: 250px;
+  width: 200px;
+  cursor: pointer;
+  padding: 12px 25px;
+  text-align: center;
+}
+
+.main-button a {
+  color: white;
+  margin-right: 5px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 12px;
+}
+
+.about {
+  width: 100%;
+  padding: 70px 0;
+}
+
+.about .about-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.about .about-main .about-image img {
+  width: 800px;
+}
+
+.about .about-main .about-description {
+  padding-left: 50px;
+}
+
+.about .about-main .about-description h1 {
+  color: #fac031;
+  margin-right: 15px;
+  font-style: italic;
+  font-size: 40px;
+  position: relative;
+  bottom: 40px;
+}
+
+.about .about-main .about-description h3 {
+  font-size: 20px;
+  margin: 0 0 20px 0;
+}
+
+.about .about-main .about-description ul {
+  list-style: none;
+  width: 80%;
+  text-align: justify;
+}
+
+.about .about-main .about-description ul li {
+  padding: 10px 0;
+}
+
+.about .about-main .about-description ul li span {
+  font-style: italic;
+}
+
+footer {
+  width: 100%;
+  padding: 30px 0 0 20px;
+  background: #eeeeee;
+}
+
+footer .footer-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+footer .footer-body .footer-block {
+  text-align: center;
+}
+
+footer .footer-body .footer-block h2 {
+  color: #000;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+footer .footer-body .footer-block p {
+  margin: 5px 0;
+}
+
+footer .footer-body .footer-block p a {
+  text-decoration: none;
+}
+
+.menu {
+  width: 100%;
+  padding: 20px 0; 
+}
+
+.menu h1 {
+  width: 100%;
+  font-size: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.menu h1 span {
+  color: #fac031;
+  margin-left: 15px;
+  font-style: italic;
+}
+
+.menu .menu-box {
+  width: 95%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 15px;
+}
+
+.menu .menu-box .menu-card {
+  width: 325px;
+  height: 480px;
+  padding-top: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.menu .menu-box .menu-card .menu-img {
+  width: 300px;
+  height: 245px;
+  margin: 0 auto;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu .menu-box .menu-card .menu-img img {
+  width: auto;
+  height: 100%;
+  transition: 0.3s;
+}
+
+.menu .menu-box .menu-card .menu-img:hover img {
+  transform: scale(1.1);
+}
+
+.menu .menu-box .menu-card .menu-info h2 {
+  width: 60%;
+  text-align: center;
+  margin: 10px auto 10px auto;
+  font-size: 25px;
+  color: #fac031;
+}
+
+.menu .menu-box .menu-card .menu-info p {
+  text-align: center;
+  height: 80px;
+  margin-top: 8px;
+  line-height: 21px;
+}
+
+.menu .menu-box .menu-card .menu-info h3 {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.menu .menu-box .menu-card .menu-info .menu-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: white;
+  background: black;
+  padding: 8px 10px;
+  margin: 10px 80px;
+  transition: 0.3s;
+  text-transform: uppercase;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.blog {
+  width: 100%;
+  padding: 20px 0;
+}
+
+.blog h1 {
+  font-size: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.blog h1 span {
+  margin-left: 15px;
+  color: #fac031;
+  font-style: italic; 
+}
+
+.blog .blog-image-box {
+  width: 95%;
+  margin: 10px auto;
+  margin-bottom: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
+}
+
+.blog .blog-image-box .blog-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: black;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.blog .blog-image-box .blog-image img {
+  width: 100%;
+  transition: 0.3s;
+  opacity: 0.4;
+}
+
+.blog .blog-image-box .blog-image h3 {
+  position: absolute;
+  font-size: 25px;
+  margin-bottom: 150px;
+  color:#fac031;
+  z-index: 5;
+  transition: 0.3s;
+}
+
+.blog .blog-image-box .blog-image span {
+  position: absolute;
+  font-size: 18px;
+  font-weight: 600;
+  font-style: italic;
+  margin-bottom: 80px;
+  color:#fac031;
+  z-index: 5;
+  transition: 0.3s;
+}
+
+.blog .blog-image-box .blog-image p {
+  position: absolute;
+  width: 400px;
+  margin-top: 60px;
+  text-align: center;
+  color: white;
+  line-height: 22px;
+  z-index: 5;
+  transition: 0.3s;
+}
+
+.blog .blog-image-box .blog-image .blog-button {
+  position: absolute;
+  margin-top: 200px;
+  color: black;
+  background-color: #fac031;
+  padding: 7px 25px;
+  text-decoration: none;
+  opacity: 0;
+  transform: translateY(45px);
+  z-index: 5;
+  transition: 0.3s;
+}
+
+.blog .blog-image-box .blog-image:hover .blog-button {
+  opacity: 1;
+  transform: translateY(0);
+}

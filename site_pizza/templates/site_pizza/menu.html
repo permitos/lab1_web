@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <title>Pizza Delicous - Меню</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'site_pizza/css/style.css' %}">
+  </head>
+  <body>
+    
+    <div class="nav-site">
+      <nav>
+        <div class="nav-logo">
+          <img src="{% static 'site_pizza/img/pizza_site_icon.png' %}">
+        </div>
+        <ul>
+          <li><a href="home">Главная</a></li>
+          <li><a href="menu">Меню</a></li>
+          <li><a href="blog">Блог</a></li>
+          <li><a href="about">О нас</a></li>
+        </ul>
+        <div class="sign-in">
+          <a href="">Войти</a>
+        </div>
+      </nav>
+    </div>
+
+    <div class="menu">
+      <h1>Наше <span>Меню</span></h1>
+      <div class="menu-box">
+        {% if food_list %}
+        {% for food in food_list %}
+          <div class="menu-card">
+            <div class="menu-img">
+              <img src="/static/site_pizza/img/{{ food.image }}">
+            </div>
+            <div class="menu-info">
+              <h2>{{ food.name }}</h2>
+              <p>{{ food.description }}</p>
+              <h3>{{ food.price }}</h3>
+              <a href="#" class="menu-button">Заказать сейчас</a>
+            </div>
+          </div>
+        {% endfor %}
+        {% endif %}
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-body">
+        <div class="footer-block">
+          <h2>Адрес</h2>
+          <p>Россия</p>
+          <p>Какой-то город</p>
+          <p>Какая-то улица, д. N</p>
+        </div>
+        <div class="footer-block">
+          <h2>Быстрое меню</h2>
+          <p><a href="home">Главная</a></p>
+          <p><a href="menu">Меню</a></p>
+          <p><a href="blog">Блог</a></p>
+          <p><a href="about">О нас</a></p>
+        </div>
+        <div class="footer-block">
+          <h2>Контакты</h2>
+          <p>+7 (XXX) XXX - XX - XX</p>
+          <p>email@example.ru</p>
+        </div>
+      </div>
+    </footer>
+
+  </body>
+</html>
