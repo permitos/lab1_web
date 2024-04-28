@@ -6,4 +6,5 @@ urlpatterns = [
     path("menu", views.menu, name="menu"),
     path("blog", views.blog, name="blog"),
     path("about", views.about, name="about"),
+    path("foodobjects", views.get_foodobject, name="foodobjects"),
 ]
